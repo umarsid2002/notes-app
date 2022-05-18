@@ -25,14 +25,12 @@ function showNodes() {
     noteObj = JSON.parse(notes);
   }
 
-  var today = new Date();
-
   let html = "";
   noteObj.forEach(function (element, index) {
     html += `
     <div class="NoteCard card mx-2 my-2" style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title">${index + 1} ${today}</h5>
+      <h5 class="card-title">${index + 1}</h5>
       <p class="card-text">${element}</p>
       <a id='${index}' onclick='deleteNote(this.id)' class="btn btn-primary">Delete Note</a>
     </div>
